@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscordBot Boilerplate", "DiscordBot Boilerplate\DiscordBot Boilerplate.csproj", "{A941781F-01DF-4527-9D9B-A3D328BFB529}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A941781F-01DF-4527-9D9B-A3D328BFB529}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A941781F-01DF-4527-9D9B-A3D328BFB529}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A941781F-01DF-4527-9D9B-A3D328BFB529}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A941781F-01DF-4527-9D9B-A3D328BFB529}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D2251135-3E30-4011-B496-BDC519519292}
+	EndGlobalSection
+EndGlobal
