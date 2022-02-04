@@ -3,7 +3,7 @@ using Discord.Interactions;
 
 namespace DiscordBot_Boilerplate.Interactions
 {
-    public class SelectMenuModule : InteractionModuleBase<ShardedInteractionContext<SocketMessageComponent>>
+    public class SelectMenuModule : InteractionModuleBase<SocketInteractionContext<SocketMessageComponent>>
     {
         [ComponentInteraction("select")]
         public async Task ButtonClicked(string[] selectedValues)

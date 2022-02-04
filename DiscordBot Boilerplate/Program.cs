@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using DiscordBot_Boilerplate;
 using DiscordBot_Boilerplate.Commands;
 using DiscordBot_Boilerplate.Interactions;
+using Discord.Interactions;
 
 var cancellationTokenSource = new CancellationTokenSource();
 IConfiguration configuration = new ConfigurationBuilder()
@@ -23,6 +24,13 @@ var services = new ServiceCollection()
     .BuildServiceProvider();
 
 var client = services.GetRequiredService<DiscordSocketClient>();
+client.GuildAvailable += async (guild) =>
+{
+    var commands = services.GetRequiredService<InteractionService>();
+    // You should NOT do this in production.
+    await commands.RegisterCommandsToGuildAsync(guild.Id).ConfigureAwait(false);
+};
+
 await client.LoginAsync(TokenType.Bot, configuration.GetSection("Token").Get<string>()).ConfigureAwait(false);
 await client.StartAsync().ConfigureAwait(false);
 

@@ -31,9 +31,14 @@ namespace DiscordBot_Boilerplate.Interactions
             {
                 // Create an execution context that matches the generic type parameter of your InteractionModuleBase<T> modules
                 IResult? result;
-                if (arg is SocketMessageComponent)
+                if (arg is SocketMessageComponent component)
                 {
-                    var ctx = new SocketInteractionContext<SocketMessageComponent>(_client, (SocketMessageComponent)arg);
+                    var ctx = new SocketInteractionContext<SocketMessageComponent>(_client, component);
+                    result = await _commands.ExecuteCommandAsync(ctx, _services).ConfigureAwait(false);
+                }
+                else if (arg is SocketSlashCommand command)
+                {
+                    var ctx = new SocketInteractionContext<SocketSlashCommand>(_client, command);
                     result = await _commands.ExecuteCommandAsync(ctx, _services).ConfigureAwait(false);
                 }
                 else

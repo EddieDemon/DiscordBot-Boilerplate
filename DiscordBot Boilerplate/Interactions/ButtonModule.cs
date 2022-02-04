@@ -1,9 +1,9 @@
-﻿using Discord.WebSocket;
-using Discord.Interactions;
+﻿using Discord.Interactions;
+using Discord.WebSocket;
 
 namespace DiscordBot_Boilerplate.Interactions
 {
-    public class ButtonModule : InteractionModuleBase<ShardedInteractionContext<SocketMessageComponent>>
+    public class ButtonModule : InteractionModuleBase<SocketInteractionContext<SocketMessageComponent>>
     {
         [ComponentInteraction("btn:*")]
         public async Task ButtonClicked(string whichButton)
