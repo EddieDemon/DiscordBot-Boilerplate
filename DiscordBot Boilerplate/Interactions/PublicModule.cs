@@ -3,7 +3,7 @@ using Discord.WebSocket;
 
 namespace DiscordBot_Boilerplate.Interactions
 {
-    public class PublicModule : InteractionModuleBase<SocketInteractionContext<SocketSlashCommand>>
+    public class PublicModule : InteractionModuleBase<SocketInteractionContext>
     {
         [SlashCommand("example", "Just an example!")]
         public async Task Example(
